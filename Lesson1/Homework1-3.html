@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*
+        1. 10 + 10 получаем число 20
+        2. число 20 преобразуется в строку и складывается с "10"
+        3. получается строка "2010"
+        4. с помощью console.log выводим result в консоль
+        */
+        let result = 10 + 10 + "10";
+        console.log(result);
+
+        /*
+        1. 10 + "10" получаем строку "1010"
+        2. "1010" + 10 получаем строку "101010"
+        3. с помощью console.log выводим result в консоль
+        */
+        result = 10 + "10" + 10;
+        console.log(result);
+
+        /*
+        1. 10 + 10 получаем число 20
+        2. +"10" преобразуется в число и складывается с числом 20
+        3. получаем число 30
+        4. с помощью console.log выводим result в консоль
+        */
+        result = 10 + 10 + +"10";
+        console.log(result);
+
+        /*
+        1. -"" преобразуется в число -0
+        2. 10/-0 получается -infinty
+        4. с помощью console.log выводим result в консоль
+        */
+        result = 10 / -"";
+        console.log(result);
+
+        /*
+        1. +"2,5" из за недопустимости , в число не преобразуется и получается NaN
+        2. 10/NaN будет NaN
+        3. с помощью console.log выводим result в консоль
+        */
+        result = 10 / +"2,5";
+        console.log(result);
+    </script>
+</body >
+</html >
