@@ -5,4 +5,4 @@ function showNumber(number){
     return ++number;
 }
 
-for(let i = 0; i<=9; i = showNumber(i)){};
+for(let i = 0; i<=9; i = showNumber(i)){}
