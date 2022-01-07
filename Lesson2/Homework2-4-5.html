@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        'use strict';
+        function getSum (arg1, arg2) {
+            return arg1 + arg2;
+        }
+        
+        function getDiff (arg1, arg2) {
+            return arg1 - arg2;
+        }
+
+        function getProd (arg1, arg2) {
+            return arg1 * arg2;
+        }
+
+        function getQuot (arg1, arg2) {
+            return arg1 / arg2;
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            let result = null;
+            switch (operation) {
+                case "add" : 
+                    result = getSum(arg1,arg2);
+                    break;
+                case "subtract" : 
+                    result = getDiff(arg1,arg2);
+                    break;
+                case "multiply" : 
+                    result = getProd(arg1,arg2);
+                    break;
+                case "divide" : 
+                    result = getQuot(arg1,arg2);
+                    break;
+                default : 
+                    return "Неизвестная математическая операция " + operation;       
+            }
+            return result;
+        }
+
+        alert(mathOperation(6,2,"add"));
+        alert(mathOperation(6,2,"subtract"));
+        alert(mathOperation(6,2,"mltiply"));
+        alert(mathOperation(6,2,"multiply"));
+        alert(mathOperation(6,2,"divide"));
+        
+    </script>
+</body >
+</html >

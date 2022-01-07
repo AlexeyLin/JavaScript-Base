@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let a = 2; 
+        /*
+        1.у скобок наивысший приоритет выполнения операции, поэтому переменная a = a*2 = 4
+        2.операция сложения 1 + 4 = 5 
+        3.результат сложения присваивается переменной x
+        */
+        let x = 1 + (a *= 2);
+        alert(x);
+    </script>
+</body >
+</html >
