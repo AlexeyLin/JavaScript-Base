@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        function Post(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        Post.prototype.edit = function (text) {
+            if (text !== "") {
+                this.text = text;
+            }
+        }
+
+        function AttachedPost(author, text, date) {
+            Post.call(this, author, text, date);
+            this.highlighted = false;
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.constructor = AttachedPost;
+
+        AttachedPost.prototype.makeTextHighlighted = function(){
+            if(!this.highlighted){
+                this.highlighted = true;
+            }
+        }
+
+        let attachedPost1 = new AttachedPost("Кирилл", "Привет", "21.12.2020");
+        console.log(attachedPost1.author);
+        console.log(attachedPost1.text);
+        console.log(attachedPost1.date);
+        console.log(attachedPost1.highlighted);
+        attachedPost1.edit("Привет всем!");
+        console.log(attachedPost1.text);
+        attachedPost1.makeTextHighlighted();
+        console.log(attachedPost1.highlighted);
+    </script>
+</body>
+
+</html>
